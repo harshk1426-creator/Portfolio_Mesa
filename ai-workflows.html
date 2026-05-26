@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Workflows — Harsh Khandelwal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .workflow-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .workflow-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+
+    .workflow-video { padding: 20px 20px 0; }
+
+    .workflow-info { padding: 20px 24px 24px; }
+    .workflow-info h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+    .workflow-info p  { font-size: 0.9rem; }
+
+    .workflow-footer {
+      padding: 14px 24px;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .ai-intro {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 2.5rem 0 3.5rem;
+    }
+
+    .stat-pill {
+      background: var(--white);
+      border-radius: 50px;
+      padding: 14px 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .stat-pill strong { display: block; font-size: 1.6rem; font-weight: 800; }
+    .stat-pill span   { font-size: 0.82rem; color: var(--muted); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">HK</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="ai-workflows.html" class="active">AI Workflows</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+    <div class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <span class="section-label">Automation</span>
+      <h1>AI <span class="gradient-text">Workflows</span></h1>
+      <p style="max-width:580px; margin:0.8rem auto 0; font-size:1.05rem;">
+        Practical AI agents built to solve real business problems — from marketing audits
+        to financial analysis. Each workflow is a working demo, not a concept.
+      </p>
+    </div>
+
+    <section>
+      <div class="stats-row">
+        <div class="stat-pill fade-up">
+          <strong class="gradient-text">5</strong>
+          <span>AI Agents Built</span>
+        </div>
+        <div class="stat-pill fade-up">
+          <strong class="gradient-text">100%</strong>
+          <span>Live Demos</span>
+        </div>
+        <div class="stat-pill fade-up">
+          <strong class="gradient-text">0 → 1</strong>
+          <span>Built from Scratch</span>
+        </div>
+      </div>
+
+      <!-- WORKFLOW CARDS -->
+      <div class="cards-grid">
+
+        <!-- 1. Instagram Auditor -->
+        <div class="workflow-card fade-up">
+          <div class="card-accent accent-pink"></div>
+          <div class="workflow-video">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.loom.com/embed/0a87caac58aa4b19910358daf4d7ec9a"
+                allowfullscreen
+                title="Instagram Auditor Demo">
+              </iframe>
+            </div>
+          </div>
+          <div class="workflow-info">
+            <span class="card-tag tag-pink">Social Media</span>
+            <h3>Instagram Auditor</h3>
+            <p>
+              An AI agent that analyses an Instagram profile's content, engagement rates, posting patterns,
+              and audience signals to generate a comprehensive audit report with actionable recommendations.
+            </p>
+          </div>
+          <div class="workflow-footer">
+            <a href="https://www.loom.com/share/0a87caac58aa4b19910358daf4d7ec9a"
+               target="_blank" rel="noopener" class="card-link link-pink">
+              Watch Full Demo ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Trend-based Notification Generator -->
+        <div class="workflow-card fade-up">
+          <div class="card-accent accent-purple"></div>
+          <div class="workflow-video">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.loom.com/embed/b1d49808c2894594a07eae59274eff8b"
+                allowfullscreen
+                title="Trend-based Notification Generator Demo">
+              </iframe>
+            </div>
+          </div>
+          <div class="workflow-info">
+            <span class="card-tag tag-purple">Content</span>
+            <h3>Trend-based Notification Generator</h3>
+            <p>
+              Automatically detects trending topics relevant to a brand and generates timely, personalised
+              push notifications or messages — keeping audiences engaged with minimal manual effort.
+            </p>
+          </div>
+          <div class="workflow-footer">
+            <a href="https://www.loom.com/share/b1d49808c2894594a07eae59274eff8b"
+               target="_blank" rel="noopener" class="card-link link-purple">
+              Watch Full Demo ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Amazon Review Scraper -->
+        <div class="workflow-card fade-up">
+          <div class="card-accent accent-blue"></div>
+          <div class="workflow-video">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.loom.com/embed/acd0e05b573e474e8a1d4c8194d3711e"
+                allowfullscreen
+                title="Amazon Review Scraper Demo">
+              </iframe>
+            </div>
+          </div>
+          <div class="workflow-info">
+            <span class="card-tag tag-blue">E-Commerce</span>
+            <h3>Amazon Review Scraper</h3>
+            <p>
+              Scrapes and analyses Amazon product reviews at scale, extracting sentiment, recurring pain points,
+              and feature requests — turning raw reviews into structured competitive intelligence.
+            </p>
+          </div>
+          <div class="workflow-footer">
+            <a href="https://www.loom.com/share/acd0e05b573e474e8a1d4c8194d3711e"
+               target="_blank" rel="noopener" class="card-link link-blue">
+              Watch Full Demo ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Automated Invoice Processor -->
+        <div class="workflow-card fade-up">
+          <div class="card-accent accent-green"></div>
+          <div class="workflow-video">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.loom.com/embed/75bfc85659074923bbd9a77d81e704a0"
+                allowfullscreen
+                title="Automated Invoice Processor Demo">
+              </iframe>
+            </div>
+          </div>
+          <div class="workflow-info">
+            <span class="card-tag tag-green">Finance Ops</span>
+            <h3>Automated Invoice Processor</h3>
+            <p>
+              Reads, extracts, and categorises invoice data automatically — eliminating manual data entry,
+              reducing errors, and feeding structured outputs directly into accounting or ERP workflows.
+            </p>
+          </div>
+          <div class="workflow-footer">
+            <a href="https://www.loom.com/share/75bfc85659074923bbd9a77d81e704a0"
+               target="_blank" rel="noopener" class="card-link link-green">
+              Watch Full Demo ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Financial Analyst -->
+        <div class="workflow-card fade-up">
+          <div class="card-accent accent-orange"></div>
+          <div class="workflow-video">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.loom.com/embed/75bfc85659074923bbd9a77d81e704a0"
+                allowfullscreen
+                title="Financial Analyst Demo">
+              </iframe>
+            </div>
+          </div>
+          <div class="workflow-info">
+            <span class="card-tag tag-orange">Finance</span>
+            <h3>Financial Analyst</h3>
+            <p>
+              An AI agent that ingests financial data (P&amp;L, balance sheets, cash flows) and generates
+              analysis reports, highlights anomalies, and surfaces key ratios — acting as an always-on analyst.
+            </p>
+          </div>
+          <div class="workflow-footer">
+            <a href="https://www.loom.com/share/75bfc85659074923bbd9a77d81e704a0"
+               target="_blank" rel="noopener" class="card-link link-orange">
+              Watch Full Demo ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="contact-strip">
+      <h2>Want to Explore AI for Your Business?</h2>
+      <p>Let's talk about how automation can unlock efficiency and scale in your workflows.</p>
+      <div class="contact-links">
+        <a href="mailto:harsh_khandelwal@pg26.mesaschool.co" class="contact-link">✉️ Email Me</a>
+        <a href="https://www.linkedin.com/in/kharshhhh/" target="_blank" rel="noopener" class="contact-link">💼 LinkedIn</a>
+      </div>
+    </div>
+
+  </div><!-- /page-content -->
+
+  <footer>
+    <p>Crafted with care by <span>Harsh Khandelwal</span> &nbsp;·&nbsp; 2025</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
