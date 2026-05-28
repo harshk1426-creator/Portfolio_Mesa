@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFAF5"/>
+      <stop offset="100%" stop-color="#FFF0E8"/>
+    </radialGradient>
+    <radialGradient id="yarnGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FADADD"/>
+      <stop offset="50%" stop-color="#F0A0A8"/>
+      <stop offset="100%" stop-color="#D87080"/>
+    </radialGradient>
+    <radialGradient id="smallYarnGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#F5C0CC"/>
+      <stop offset="50%" stop-color="#E890A8"/>
+      <stop offset="100%" stop-color="#C06080"/>
+    </radialGradient>
+    <linearGradient id="needleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0D070"/>
+      <stop offset="50%" stop-color="#C9943F"/>
+      <stop offset="100%" stop-color="#A07030"/>
+    </linearGradient>
+    <path id="bottomTextArc" d="M 116 362 A 175 175 0 0 1 384 362"/>
+    <clipPath id="yarnBallClip">
+      <circle cx="250" cy="205" r="72"/>
+    </clipPath>
+    <clipPath id="smallYarnClip">
+      <circle cx="178" cy="328" r="30"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="250" cy="250" r="242" fill="url(#bgGrad)"/>
+
+  <!-- Gold border rings -->
+  <circle cx="250" cy="250" r="242" fill="none" stroke="#C9943F" stroke-width="4"/>
+  <circle cx="250" cy="250" r="234" fill="none" stroke="#E8C87A" stroke-width="1.5"/>
+  <circle cx="250" cy="250" r="228" fill="none" stroke="#C9943F" stroke-width="2"/>
+
+  <!-- ===== FLORAL — LEFT ===== -->
+  <!-- Rose petals -->
+  <circle cx="90" cy="215" r="14" fill="#E8A0B0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="76" cy="202" r="10" fill="#F0B8C5" stroke="#C07080" stroke-width="1"/>
+  <circle cx="76" cy="228" r="10" fill="#E8A0B0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="90" cy="195" r="10" fill="#F5C8D2" stroke="#C07080" stroke-width="1"/>
+  <circle cx="104" cy="202" r="10" fill="#F0B8C5" stroke="#C07080" stroke-width="1"/>
+  <circle cx="104" cy="228" r="10" fill="#E8A0B0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="90" cy="235" r="10" fill="#F0B8C5" stroke="#C07080" stroke-width="1"/>
+  <circle cx="90" cy="215" r="6" fill="#FFF0F3"/>
+  <!-- Small bud -->
+  <circle cx="68" cy="255" r="9" fill="#F5C8D2" stroke="#C07080" stroke-width="1"/>
+  <circle cx="58" cy="248" r="6" fill="#F5C8D2" stroke="#C07080" stroke-width="1"/>
+  <circle cx="58" cy="262" r="6" fill="#EDB0C0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="68" cy="242" r="6" fill="#F5C8D2" stroke="#C07080" stroke-width="1"/>
+  <circle cx="78" cy="248" r="6" fill="#EDB0C0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="78" cy="262" r="6" fill="#F5C8D2" stroke="#C07080" stroke-width="1"/>
+  <circle cx="68" cy="268" r="6" fill="#EDB0C0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="68" cy="255" r="4" fill="#FFF5F7"/>
+  <!-- Stems and leaves -->
+  <path d="M 90 230 Q 85 260 78 285" stroke="#7A9A68" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="82" cy="257" rx="9" ry="5" fill="#90B878" transform="rotate(-30 82 257)"/>
+  <path d="M 81 268 Q 70 280 68 290" stroke="#7A9A68" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <ellipse cx="73" cy="278" rx="8" ry="5" fill="#90B878" transform="rotate(20 73 278)"/>
+  <!-- Berries -->
+  <circle cx="71" cy="289" r="4" fill="#D4849A"/>
+  <circle cx="79" cy="293" r="3.5" fill="#C87090"/>
+  <circle cx="87" cy="290" r="4" fill="#D4849A"/>
+
+  <!-- ===== FLORAL — RIGHT ===== -->
+  <circle cx="410" cy="215" r="14" fill="#E8A0B0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="396" cy="202" r="10" fill="#F0B8C5" stroke="#C07080" stroke-width="1"/>
+  <circle cx="396" cy="228" r="10" fill="#E8A0B0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="410" cy="195" r="10" fill="#F5C8D2" stroke="#C07080" stroke-width="1"/>
+  <circle cx="424" cy="202" r="10" fill="#F0B8C5" stroke="#C07080" stroke-width="1"/>
+  <circle cx="424" cy="228" r="10" fill="#E8A0B0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="410" cy="235" r="10" fill="#F0B8C5" stroke="#C07080" stroke-width="1"/>
+  <circle cx="410" cy="215" r="6" fill="#FFF0F3"/>
+  <circle cx="432" cy="255" r="9" fill="#F5C8D2" stroke="#C07080" stroke-width="1"/>
+  <circle cx="422" cy="248" r="6" fill="#F5C8D2" stroke="#C07080" stroke-width="1"/>
+  <circle cx="422" cy="262" r="6" fill="#EDB0C0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="432" cy="242" r="6" fill="#F5C8D2" stroke="#C07080" stroke-width="1"/>
+  <circle cx="442" cy="248" r="6" fill="#EDB0C0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="442" cy="262" r="6" fill="#F5C8D2" stroke="#C07080" stroke-width="1"/>
+  <circle cx="432" cy="268" r="6" fill="#EDB0C0" stroke="#C07080" stroke-width="1"/>
+  <circle cx="432" cy="255" r="4" fill="#FFF5F7"/>
+  <path d="M 410 230 Q 415 260 422 285" stroke="#7A9A68" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="418" cy="257" rx="9" ry="5" fill="#90B878" transform="rotate(30 418 257)"/>
+  <path d="M 419 268 Q 430 280 432 290" stroke="#7A9A68" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <ellipse cx="427" cy="278" rx="8" ry="5" fill="#90B878" transform="rotate(-20 427 278)"/>
+  <circle cx="429" cy="289" r="4" fill="#D4849A"/>
+  <circle cx="421" cy="293" r="3.5" fill="#C87090"/>
+  <circle cx="413" cy="290" r="4" fill="#D4849A"/>
+
+  <!-- ===== KNITTING NEEDLES (upper half — behind yarn ball) ===== -->
+  <line x1="178" y1="118" x2="250" y2="205" stroke="url(#needleGrad)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="178" cy="118" r="11" fill="#C9943F"/>
+  <circle cx="178" cy="118" r="7.5" fill="#E8C87A"/>
+  <circle cx="178" cy="118" r="4" fill="#C9943F"/>
+  <line x1="322" y1="118" x2="250" y2="205" stroke="url(#needleGrad)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="322" cy="118" r="11" fill="#C9943F"/>
+  <circle cx="322" cy="118" r="7.5" fill="#E8C87A"/>
+  <circle cx="322" cy="118" r="4" fill="#C9943F"/>
+
+  <!-- ===== MAIN YARN BALL ===== -->
+  <circle cx="250" cy="205" r="72" fill="url(#yarnGrad)" stroke="#C07080" stroke-width="2"/>
+  <!-- Horizontal yarn arcs -->
+  <path d="M 178 205 Q 250 182 322 205" stroke="#C07080" stroke-width="1.5" fill="none" clip-path="url(#yarnBallClip)" opacity="0.7"/>
+  <path d="M 178 205 Q 250 228 322 205" stroke="#C07080" stroke-width="1.5" fill="none" clip-path="url(#yarnBallClip)" opacity="0.7"/>
+  <path d="M 184 185 Q 250 170 316 185" stroke="#B06070" stroke-width="1" fill="none" clip-path="url(#yarnBallClip)" opacity="0.5"/>
+  <path d="M 184 225 Q 250 240 316 225" stroke="#B06070" stroke-width="1" fill="none" clip-path="url(#yarnBallClip)" opacity="0.5"/>
+  <path d="M 193 168 Q 250 157 307 168" stroke="#B06070" stroke-width="1" fill="none" clip-path="url(#yarnBallClip)" opacity="0.4"/>
+  <path d="M 193 242 Q 250 253 307 242" stroke="#B06070" stroke-width="1" fill="none" clip-path="url(#yarnBallClip)" opacity="0.4"/>
+  <!-- Vertical yarn arcs -->
+  <path d="M 213 133 Q 232 205 213 277" stroke="#C07080" stroke-width="1" fill="none" clip-path="url(#yarnBallClip)" opacity="0.5"/>
+  <path d="M 287 133 Q 268 205 287 277" stroke="#C07080" stroke-width="1" fill="none" clip-path="url(#yarnBallClip)" opacity="0.5"/>
+  <path d="M 250 133 Q 228 205 250 277" stroke="#B06070" stroke-width="1" fill="none" clip-path="url(#yarnBallClip)" opacity="0.35"/>
+  <!-- Highlight -->
+  <ellipse cx="225" cy="182" rx="22" ry="14" fill="white" opacity="0.25"/>
+
+  <!-- ===== KNITTING NEEDLES (lower half — in front of yarn ball) ===== -->
+  <line x1="250" y1="205" x2="322" y2="302" stroke="url(#needleGrad)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="322" cy="302" r="4" fill="#A07030"/>
+  <line x1="250" y1="205" x2="178" y2="302" stroke="url(#needleGrad)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="178" cy="302" r="4" fill="#A07030"/>
+
+  <!-- ===== TRAILING YARN THREAD ===== -->
+  <path d="M 198 268 Q 188 298 180 312" stroke="#D4849A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- ===== SMALL YARN BALL ===== -->
+  <circle cx="178" cy="328" r="30" fill="url(#smallYarnGrad)" stroke="#C07080" stroke-width="1.5"/>
+  <path d="M 148 328 Q 178 316 208 328" stroke="#A06078" stroke-width="1" fill="none" clip-path="url(#smallYarnClip)" opacity="0.7"/>
+  <path d="M 148 328 Q 178 340 208 328" stroke="#A06078" stroke-width="1" fill="none" clip-path="url(#smallYarnClip)" opacity="0.7"/>
+  <path d="M 162 300 Q 172 328 162 356" stroke="#A06078" stroke-width="1" fill="none" clip-path="url(#smallYarnClip)" opacity="0.5"/>
+  <path d="M 194 300 Q 184 328 194 356" stroke="#A06078" stroke-width="1" fill="none" clip-path="url(#smallYarnClip)" opacity="0.5"/>
+  <ellipse cx="168" cy="315" rx="10" ry="6" fill="white" opacity="0.2"/>
+
+  <!-- ===== BRAND NAME TEXT ===== -->
+  <text font-family="'Palatino Linotype','Book Antiqua',Palatino,Georgia,serif"
+        font-size="24"
+        fill="#8B3050"
+        font-weight="bold"
+        letter-spacing="3">
+    <textPath href="#bottomTextArc" startOffset="9%">THE WOOL EMPORIUM</textPath>
+  </text>
+
+  <!-- Decorative gold dots flanking text -->
+  <circle cx="116" cy="362" r="4.5" fill="#C9943F"/>
+  <circle cx="384" cy="362" r="4.5" fill="#C9943F"/>
+
+  <!-- Subtle decorative arc beneath text -->
+  <path d="M 130 378 A 145 145 0 0 0 370 378" stroke="#C9943F" stroke-width="1" fill="none" opacity="0.5"/>
+</svg>
