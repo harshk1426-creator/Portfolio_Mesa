@@ -152,8 +152,8 @@ nav {
 }
 
 .hero-photo-ring {
-  width: 280px;
-  height: 280px;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
   padding: 4px;
   background: linear-gradient(135deg, var(--pink-mid), var(--purple-mid), var(--blue-mid));
@@ -166,9 +166,13 @@ nav {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  object-position: top;
+  object-position: center 15%;
   display: block;
   border: 3px solid var(--bg);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .hero-badge {
@@ -611,8 +615,8 @@ footer span { color: var(--pink-mid); }
   }
 
   .hero-photo-ring {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
   }
 }
 
