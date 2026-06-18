@@ -22,3 +22,12 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Case study title click: pop + orange glow + jiggle
+document.querySelectorAll('.cs-title').forEach(title => {
+  title.addEventListener('click', () => {
+    title.classList.remove('popped');
+    void title.offsetWidth; // force reflow to restart animation
+    title.classList.add('popped');
+  });
+});
