@@ -50,6 +50,78 @@ p  { font-size: 1rem; color: var(--muted); }
   background-clip: text;
 }
 
+/* ===== WHO AM I ===== */
+.who-section {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  padding: 80px 6%;
+  background: #1C1C2E;
+  min-height: 80vh;
+}
+
+.who-image-col {
+  flex: 0 0 42%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.who-image {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.who-content-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.who-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #F5843A;
+  background: #F5843A;
+  color: #ffffff;
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.who-body {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+  color: rgba(255,255,255,0.88);
+  line-height: 2;
+  max-width: 600px;
+}
+
+.caveat-mark {
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
+  font-size: 1.35em;
+  color: #F5843A;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+@media (max-width: 768px) {
+  .who-section {
+    flex-direction: column;
+    padding: 60px 5%;
+    min-height: auto;
+  }
+  .who-image-col { flex: none; width: 80%; }
+  .who-image { max-width: 100%; }
+}
+
 /* ===== NAV LANDING ===== */
 .nav-landing {
   position: fixed;
