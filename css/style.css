@@ -722,6 +722,113 @@ section { padding: 80px 5%; }
   margin-bottom: 0.35rem;
 }
 
+/* ===== CASE STUDIES — TILE LAYOUT ===== */
+.cs-opening {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text);
+  text-align: left;
+  max-width: 700px;
+  margin-bottom: 0;
+}
+
+.page-hero:has(.cs-opening) {
+  text-align: left;
+}
+
+.cs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 48px 5% 80px;
+}
+
+.cs-tile {
+  display: flex;
+  gap: 32px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 28px;
+  transition: box-shadow 0.25s;
+}
+
+.cs-tile:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.cs-image-col {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cs-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.cs-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cs-deck-link {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.cs-deck-link:hover { opacity: 0.6; }
+
+.cs-text-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cs-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cs-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.cs-context,
+.cs-solution {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.cs-solution { color: var(--text); opacity: 0.8; }
+
+@media (max-width: 640px) {
+  .cs-tile { flex-direction: column; gap: 20px; }
+  .cs-image-col { flex: none; width: 100%; }
+}
+
 /* ===== CONTACT STRIP ===== */
 .contact-strip {
   background: linear-gradient(135deg, var(--pink-mid), var(--purple-mid), var(--blue-mid));
