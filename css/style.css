@@ -919,6 +919,13 @@ section { padding: 80px 5%; }
 
 .cs-deck-link:hover { opacity: 0.5; }
 
+.cs-multi-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+}
+
 @media (max-width: 600px) {
   .cs-list { grid-template-columns: 1fr; }
 }
