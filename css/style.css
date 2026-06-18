@@ -723,24 +723,24 @@ section { padding: 80px 5%; }
 }
 
 /* ===== CASE STUDIES — TILE LAYOUT ===== */
+.cs-home-section {
+  padding: 80px 5%;
+  background: #ffffff;
+}
+
 .cs-opening {
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   font-weight: 800;
   color: var(--text);
   text-align: left;
   max-width: 700px;
-  margin-bottom: 0;
-}
-
-.page-hero:has(.cs-opening) {
-  text-align: left;
+  margin-bottom: 48px;
 }
 
 .cs-list {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 48px 5% 80px;
 }
 
 .cs-tile {
