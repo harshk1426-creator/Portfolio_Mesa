@@ -105,6 +105,23 @@ p  { font-size: 1rem; color: var(--muted); }
   max-width: 600px;
 }
 
+.caveat-black {
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
+  font-size: 1.35em;
+  color: #1C1C2E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+.caveat-bold-black {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 1.35em;
+  color: #1C1C2E;
+}
+
 .caveat-mark {
   font-family: 'Caveat', cursive;
   font-weight: 600;
