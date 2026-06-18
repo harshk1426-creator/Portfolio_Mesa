@@ -98,11 +98,17 @@ p  { font-size: 1rem; color: var(--muted); }
 
 .who-body {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
   font-weight: 400;
   color: #1C1C2E;
-  line-height: 2;
+  line-height: 1.8;
   max-width: 600px;
+}
+
+.who-tagline {
+  font-size: 1.35em;
+  font-weight: 700;
+  color: #1C1C2E;
 }
 
 .caveat-black {
