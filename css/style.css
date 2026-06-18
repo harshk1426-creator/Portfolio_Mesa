@@ -50,6 +50,105 @@ p  { font-size: 1rem; color: var(--muted); }
   background-clip: text;
 }
 
+/* ===== NAV LANDING ===== */
+.nav-landing {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  z-index: 999;
+}
+
+.nav-logo-landing {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #1C1C2E;
+}
+
+.nav-linkedin {
+  color: #1C1C2E;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.nav-linkedin:hover { color: #0A66C2; }
+
+/* ===== HERO LANDING ===== */
+.hero-landing {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--nav-h);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-landing-text {
+  z-index: 1;
+  padding: 0 5%;
+}
+
+.landing-greeting {
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-weight: 900;
+  color: #1C1C2E;
+  line-height: 1.15;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-hand 2.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-hand {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10%, 30%      { transform: rotate(18deg); }
+  20%, 40%      { transform: rotate(-8deg); }
+}
+
+.landing-name {
+  color: #F5843A;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.name-underline {
+  position: absolute;
+  left: 0; bottom: -10px;
+  width: 100%;
+  height: 18px;
+  overflow: visible;
+}
+
+.hero-landing-photo {
+  margin-top: 2rem;
+  z-index: 1;
+}
+
+.landing-photo {
+  height: clamp(340px, 48vh, 520px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ===== NAV ===== */
 nav {
   position: fixed;
@@ -99,7 +198,7 @@ nav {
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
 
 /* ===== PAGE WRAPPER ===== */
-.page-content { padding-top: var(--nav-h); }
+.page-content { padding-top: 0; }
 
 /* ===== HERO ===== */
 .hero {
