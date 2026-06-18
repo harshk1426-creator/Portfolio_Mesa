@@ -22,3 +22,48 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Custom cursor
+const cursorDot  = document.createElement('div');
+const cursorRing = document.createElement('div');
+cursorDot.className  = 'cursor-dot';
+cursorRing.className = 'cursor-ring';
+document.body.appendChild(cursorDot);
+document.body.appendChild(cursorRing);
+
+let mouseX = 0, mouseY = 0;
+let ringX  = 0, ringY  = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+
+  // Spawn a dust particle on every move
+  spawnDust(mouseX, mouseY);
+});
+
+// Lazy-follow ring via rAF
+(function animateRing() {
+  ringX += (mouseX - ringX) * 0.12;
+  ringY += (mouseY - ringY) * 0.12;
+  cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
+  requestAnimationFrame(animateRing);
+})();
+
+// Grow ring on clickable elements
+document.querySelectorAll('a, button, [class*="cs-tile"]').forEach(el => {
+  el.addEventListener('mouseenter', () => cursorRing.classList.add('cursor-ring--hover'));
+  el.addEventListener('mouseleave', () => cursorRing.classList.remove('cursor-ring--hover'));
+});
+
+// Dust / texture trail
+function spawnDust(x, y) {
+  const d = document.createElement('div');
+  d.className = 'cursor-dust';
+  const offset = () => (Math.random() - 0.5) * 18;
+  d.style.left = (x + offset()) + 'px';
+  d.style.top  = (y + offset()) + 'px';
+  document.body.appendChild(d);
+  setTimeout(() => d.remove(), 600);
+}

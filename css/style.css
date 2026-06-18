@@ -1,3 +1,55 @@
+/* ===== CUSTOM CURSOR ===== */
+* { cursor: none !important; }
+
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 8px; height: 8px;
+  background: #1C1C2E;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  margin-left: -4px;
+  margin-top: -4px;
+  transition: background 0.2s;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 36px; height: 36px;
+  border: 2px solid rgba(28, 28, 46, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  margin-left: -18px;
+  margin-top: -18px;
+  transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease, border-color 0.2s ease;
+}
+
+.cursor-ring--hover {
+  width: 56px; height: 56px;
+  margin-left: -28px;
+  margin-top: -28px;
+  border-color: rgba(245, 132, 58, 0.7);
+}
+
+.cursor-dust {
+  position: fixed;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: rgba(180, 180, 180, 0.45);
+  pointer-events: none;
+  z-index: 99997;
+  transform: translate(-50%, -50%);
+  animation: dust-fade 0.6s ease forwards;
+}
+
+@keyframes dust-fade {
+  0%   { opacity: 1;   transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0;   transform: translate(-50%, -50%) scale(0.2); }
+}
+
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
