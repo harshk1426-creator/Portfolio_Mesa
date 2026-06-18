@@ -740,8 +740,8 @@ section { padding: 80px 5%; }
 
 .cs-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   overflow: visible;
 }
 
@@ -772,7 +772,7 @@ section { padding: 80px 5%; }
 
 .cs-img-wrap {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 1;
   overflow: hidden;
   background: #f0f0f0;
 }
@@ -834,11 +834,7 @@ section { padding: 80px 5%; }
 
 .cs-deck-link:hover { opacity: 0.5; }
 
-@media (max-width: 900px) {
-  .cs-list { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .cs-list { grid-template-columns: 1fr; }
 }
 
