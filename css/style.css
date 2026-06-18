@@ -792,7 +792,7 @@ section { padding: 80px 5%; }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #F5843A;
 }
 
 .cs-title {
