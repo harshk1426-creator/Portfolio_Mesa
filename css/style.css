@@ -99,7 +99,7 @@ p  { font-size: 1rem; color: var(--muted); }
 
 .landing-greeting {
   font-size: clamp(2.8rem, 7vw, 6rem);
-  font-weight: 900;
+  font-weight: 300;
   color: #1C1C2E;
   line-height: 1.15;
   display: flex;
@@ -126,6 +126,10 @@ p  { font-size: 1rem; color: var(--muted); }
   position: relative;
   display: inline-block;
   white-space: nowrap;
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 1;
 }
 
 .name-underline {
