@@ -1077,8 +1077,8 @@ footer span { color: var(--pink-mid); }
   min-height: 65vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 5% 80px;
+  justify-content: center;
+  padding: 60px 5%;
   overflow: visible;
 }
 
