@@ -58,6 +58,58 @@ document.querySelectorAll('a, button, [class*="cs-tile"]').forEach(el => {
   el.addEventListener('mouseleave', () => cursorRing.classList.remove('cursor-ring--hover'));
 });
 
+// AI Workflow modal
+const aiAgents = [
+  {
+    title: 'Instagram Auditor',
+    tag: 'Social Media',
+    desc: "An AI agent that analyses an Instagram profile's content, engagement rates, posting patterns, and audience signals to generate a comprehensive audit report with actionable recommendations.",
+    loom: 'https://www.loom.com/share/0a87caac58aa4b19910358daf4d7ec9a'
+  },
+  {
+    title: 'Trend-based Notification Generator',
+    tag: 'Content',
+    desc: 'Automatically detects trending topics relevant to a brand and generates timely, personalised push notifications or messages - keeping audiences engaged with minimal manual effort.',
+    loom: 'https://www.loom.com/share/b1d49808c2894594a07eae59274eff8b'
+  },
+  {
+    title: 'Amazon Review Scraper',
+    tag: 'E-Commerce',
+    desc: 'Scrapes and analyses Amazon product reviews at scale, extracting sentiment, recurring pain points, and feature requests - turning raw reviews into structured competitive intelligence.',
+    loom: 'https://www.loom.com/share/acd0e05b573e474e8a1d4c8194d3711e'
+  },
+  {
+    title: 'Automated Invoice Processor',
+    tag: 'Finance Ops',
+    desc: 'Reads, extracts, and categorises invoice data automatically - eliminating manual data entry, reducing errors, and feeding structured outputs directly into accounting or ERP workflows.',
+    loom: 'https://www.loom.com/share/75bfc85659074923bbd9a77d81e704a0'
+  },
+  {
+    title: 'Financial Analyst',
+    tag: 'Finance',
+    desc: 'An AI agent that ingests financial data (P&L, balance sheets, cash flows) and generates analysis reports, highlights anomalies, and surfaces key ratios - acting as an always-on analyst.',
+    loom: 'https://www.loom.com/share/75bfc85659074923bbd9a77d81e704a0'
+  }
+];
+
+const aiModal      = document.getElementById('aiModal');
+const aiModalClose = document.getElementById('aiModalClose');
+
+document.querySelectorAll('.ai-node').forEach(node => {
+  node.addEventListener('click', () => {
+    const idx   = parseInt(node.dataset.index, 10);
+    const agent = aiAgents[idx];
+    document.getElementById('aiModalTag').textContent   = agent.tag;
+    document.getElementById('aiModalTitle').textContent = agent.title;
+    document.getElementById('aiModalDesc').textContent  = agent.desc;
+    document.getElementById('aiModalBtn').href          = agent.loom;
+    aiModal.classList.add('open');
+  });
+});
+
+if (aiModalClose) aiModalClose.addEventListener('click', () => aiModal.classList.remove('open'));
+if (aiModal) aiModal.addEventListener('click', e => { if (e.target === aiModal) aiModal.classList.remove('open'); });
+
 // Dust / texture trail
 function spawnDust(x, y) {
   const d = document.createElement('div');
