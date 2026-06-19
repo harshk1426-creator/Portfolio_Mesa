@@ -61,23 +61,33 @@ document.querySelectorAll('a, button, [class*="cs-tile"]').forEach(el => {
 // AI node hover — popup positioned below the hovered node
 const aiNodePopup = document.getElementById('aiNodePopup');
 if (aiNodePopup) {
+  let hideTimer = null;
+
+  function showPopup(wrap) {
+    clearTimeout(hideTimer);
+    const rect = wrap.querySelector('.ai-node').getBoundingClientRect();
+    document.getElementById('aiPopupTag').textContent   = wrap.dataset.tag;
+    document.getElementById('aiPopupTitle').textContent = wrap.dataset.title;
+    document.getElementById('aiPopupDesc').textContent  = wrap.dataset.desc;
+    document.getElementById('aiPopupBtn').href          = wrap.dataset.loom;
+    aiNodePopup.style.left      = (rect.left + rect.width / 2) + 'px';
+    aiNodePopup.style.top       = (rect.bottom + 14) + 'px';
+    aiNodePopup.style.transform = 'translateX(-50%)';
+    aiNodePopup.classList.add('visible');
+  }
+
+  function scheduleHide() {
+    hideTimer = setTimeout(() => aiNodePopup.classList.remove('visible'), 120);
+  }
+
   document.querySelectorAll('.ai-node-wrap').forEach(wrap => {
-    wrap.addEventListener('mouseenter', () => {
-      const rect = wrap.querySelector('.ai-node').getBoundingClientRect();
-      document.getElementById('aiPopupTag').textContent   = wrap.dataset.tag;
-      document.getElementById('aiPopupTitle').textContent = wrap.dataset.title;
-      document.getElementById('aiPopupDesc').textContent  = wrap.dataset.desc;
-      document.getElementById('aiPopupBtn').href          = wrap.dataset.loom;
-      // Position below node, centered on it
-      aiNodePopup.style.left      = (rect.left + rect.width / 2) + 'px';
-      aiNodePopup.style.top       = (rect.bottom + 14) + 'px';
-      aiNodePopup.style.transform = 'translateX(-50%)';
-      aiNodePopup.classList.add('visible');
-    });
-    wrap.addEventListener('mouseleave', () => {
-      aiNodePopup.classList.remove('visible');
-    });
+    wrap.addEventListener('mouseenter', () => showPopup(wrap));
+    wrap.addEventListener('mouseleave', scheduleHide);
   });
+
+  // Keep popup open when mouse moves onto it
+  aiNodePopup.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+  aiNodePopup.addEventListener('mouseleave', scheduleHide);
 }
 
 // Dust / texture trail

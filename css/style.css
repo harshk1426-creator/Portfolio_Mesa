@@ -1075,6 +1075,7 @@ footer span { color: var(--pink-mid); }
 .ai-section {
   position: relative;
   padding: 80px 5% 100px;
+  min-height: 100vh;
   overflow: visible;
 }
 
