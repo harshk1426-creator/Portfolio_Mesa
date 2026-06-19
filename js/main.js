@@ -23,6 +23,51 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+// Hero canvas ripple effect
+(function () {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  const hero  = canvas.parentElement;
+  const ctx   = canvas.getContext('2d');
+  let ripples = [];
+  let animId  = null;
+
+  function resize() {
+    canvas.width  = hero.offsetWidth;
+    canvas.height = hero.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  hero.addEventListener('mousemove', e => {
+    const rect = hero.getBoundingClientRect();
+    ripples.push({ x: e.clientX - rect.left, y: e.clientY - rect.top, r: 0, alpha: 0.45 });
+    if (ripples.length === 1) animate();
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    ripples = [];
+    if (animId) { cancelAnimationFrame(animId); animId = null; }
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  });
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ripples = ripples.filter(r => r.alpha > 0.01);
+    ripples.forEach(r => {
+      ctx.beginPath();
+      ctx.arc(r.x, r.y, r.r, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(160,160,160,${r.alpha})`;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      r.r     += 3.5;
+      r.alpha *= 0.92;
+    });
+    if (ripples.length) animId = requestAnimationFrame(animate);
+    else { animId = null; ctx.clearRect(0, 0, canvas.width, canvas.height); }
+  }
+})();
+
 // Custom cursor
 const cursorDot  = document.createElement('div');
 const cursorRing = document.createElement('div');
