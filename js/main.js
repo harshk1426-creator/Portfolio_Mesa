@@ -58,15 +58,20 @@ document.querySelectorAll('a, button, [class*="cs-tile"]').forEach(el => {
   el.addEventListener('mouseleave', () => cursorRing.classList.remove('cursor-ring--hover'));
 });
 
-// AI node hover — shared fixed popup
+// AI node hover — popup positioned below the hovered node
 const aiNodePopup = document.getElementById('aiNodePopup');
 if (aiNodePopup) {
   document.querySelectorAll('.ai-node-wrap').forEach(wrap => {
     wrap.addEventListener('mouseenter', () => {
+      const rect = wrap.querySelector('.ai-node').getBoundingClientRect();
       document.getElementById('aiPopupTag').textContent   = wrap.dataset.tag;
       document.getElementById('aiPopupTitle').textContent = wrap.dataset.title;
       document.getElementById('aiPopupDesc').textContent  = wrap.dataset.desc;
       document.getElementById('aiPopupBtn').href          = wrap.dataset.loom;
+      // Position below node, centered on it
+      aiNodePopup.style.left      = (rect.left + rect.width / 2) + 'px';
+      aiNodePopup.style.top       = (rect.bottom + 14) + 'px';
+      aiNodePopup.style.transform = 'translateX(-50%)';
       aiNodePopup.classList.add('visible');
     });
     wrap.addEventListener('mouseleave', () => {
