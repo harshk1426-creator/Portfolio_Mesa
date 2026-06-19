@@ -791,15 +791,28 @@ section { padding: 80px 5%; }
   padding: 80px 5%;
   background: #ffffff;
   overflow: visible;
+  display: flex;
+  align-items: flex-start;
+  gap: 4%;
+}
+
+.cs-sticky-col {
+  flex: 0 0 28%;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
 }
 
 .cs-opening {
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
   font-weight: 800;
   color: #F5843A !important;
-  text-align: left;
-  max-width: 700px;
-  margin-bottom: 48px;
+  line-height: 1.3;
+}
+
+.cs-scroll-col {
+  flex: 1;
+  min-width: 0;
 }
 
 .cs-list {
