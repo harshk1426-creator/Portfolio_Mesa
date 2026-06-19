@@ -1053,12 +1053,11 @@ footer span { color: var(--pink-mid); }
 /* ===== AI WORKFLOWS SECTION ===== */
 .ai-section {
   position: relative;
-  padding: 100px 5% 180px;
+  padding: 80px 5% 80px;
   overflow: visible;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .ai-bg {
@@ -1078,6 +1077,9 @@ footer span { color: var(--pink-mid); }
   position: relative;
   z-index: 2;
   text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .ai-heading {
@@ -1088,13 +1090,12 @@ footer span { color: var(--pink-mid); }
 }
 
 .ai-subhead {
-  color: #333;
+  color: #555;
   font-size: 0.95rem;
-  margin-bottom: 3.5rem;
-  text-shadow: 0 1px 2px rgba(255,255,255,0.7);
+  margin-bottom: 0;
 }
 
-/* Pipeline row */
+/* Pipeline row — pushed to bottom so popup has room above */
 .ai-pipeline {
   display: flex;
   align-items: center;
@@ -1102,7 +1103,8 @@ footer span { color: var(--pink-mid); }
   gap: 0;
   flex-wrap: nowrap;
   overflow-x: auto;
-  padding: 260px 0 20px;
+  padding: 16px 0 16px;
+  margin-top: auto;
 }
 
 /* Arrow connector */
@@ -1237,37 +1239,50 @@ footer span { color: var(--pink-mid); }
 .ai-popup {
   display: none;
   position: absolute;
-  bottom: calc(100% + 16px);
+  bottom: calc(100% + 20px);
   top: auto;
   left: 50%;
   transform: translateX(-50%);
-  width: 320px;
-  background: #fff;
-  border-radius: 16px;
-  padding: 24px 22px 20px;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
-  border: 1px solid rgba(245,132,58,0.2);
-  z-index: 100;
-  animation: popup-in 0.2s ease;
+  width: 300px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 0 0 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.16), 0 0 0 1.5px rgba(245,132,58,0.25);
+  z-index: 200;
+  animation: popup-in 0.22s cubic-bezier(0.34,1.56,0.64,1);
   text-align: left;
+  overflow: hidden;
 }
 
+/* Orange accent bar at top */
+.ai-popup::after {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, #F5843A, #ffb347);
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Caret arrow pointing down to node */
 .ai-popup::before {
   content: '';
   position: absolute;
-  bottom: -8px;
-  top: auto;
+  bottom: -9px;
   left: 50%;
   transform: translateX(-50%);
-  width: 16px;
-  height: 8px;
-  background: #fff;
-  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #fff;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.08));
 }
 
 @keyframes popup-in {
-  from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
-  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+  from { opacity: 0; transform: translateX(-50%) translateY(10px) scale(0.95); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
 }
 
 .ai-node-wrap:hover .ai-popup { display: block; }
@@ -1283,21 +1298,25 @@ footer span { color: var(--pink-mid); }
   padding: 3px 9px;
   border-radius: 50px;
   margin-bottom: 8px;
+  margin-top: 22px;
+  margin-left: 22px;
 }
 
 .ai-popup-title {
   color: #F5843A;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 800;
   margin-bottom: 10px;
   line-height: 1.3;
+  padding: 0 22px;
 }
 
 .ai-popup-desc {
-  color: #444;
-  font-size: 0.82rem;
-  line-height: 1.6;
-  margin-bottom: 16px;
+  color: #555;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  padding: 0 22px;
 }
 
 .ai-popup-btn {
@@ -1306,14 +1325,17 @@ footer span { color: var(--pink-mid); }
   color: #fff;
   font-size: 0.82rem;
   font-weight: 700;
-  padding: 9px 20px;
+  padding: 9px 22px;
   border-radius: 50px;
-  transition: background 0.2s, transform 0.15s;
+  margin-left: 22px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 14px rgba(245,132,58,0.35);
 }
 
 .ai-popup-btn:hover {
   background: #d96e2a;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245,132,58,0.45);
 }
 
 @media (max-width: 420px) {
