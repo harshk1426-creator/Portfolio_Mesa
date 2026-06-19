@@ -58,6 +58,23 @@ document.querySelectorAll('a, button, [class*="cs-tile"]').forEach(el => {
   el.addEventListener('mouseleave', () => cursorRing.classList.remove('cursor-ring--hover'));
 });
 
+// AI node hover — shared fixed popup
+const aiNodePopup = document.getElementById('aiNodePopup');
+if (aiNodePopup) {
+  document.querySelectorAll('.ai-node-wrap').forEach(wrap => {
+    wrap.addEventListener('mouseenter', () => {
+      document.getElementById('aiPopupTag').textContent   = wrap.dataset.tag;
+      document.getElementById('aiPopupTitle').textContent = wrap.dataset.title;
+      document.getElementById('aiPopupDesc').textContent  = wrap.dataset.desc;
+      document.getElementById('aiPopupBtn').href          = wrap.dataset.loom;
+      aiNodePopup.classList.add('visible');
+    });
+    wrap.addEventListener('mouseleave', () => {
+      aiNodePopup.classList.remove('visible');
+    });
+  });
+}
+
 // Dust / texture trail
 function spawnDust(x, y) {
   const d = document.createElement('div');
