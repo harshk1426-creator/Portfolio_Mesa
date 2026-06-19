@@ -784,7 +784,7 @@ section { padding: 80px 5%; }
 .cs-opening {
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   font-weight: 800;
-  color: #F5843A;
+  color: #F5843A !important;
   text-align: left;
   max-width: 700px;
   margin-bottom: 48px;
