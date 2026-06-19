@@ -219,6 +219,12 @@ p  { font-size: 1rem; color: var(--muted); }
   color: #1C1C2E;
 }
 
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .nav-linkedin {
   color: #1C1C2E;
   display: flex;
