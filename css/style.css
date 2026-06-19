@@ -795,10 +795,10 @@ section { padding: 80px 5%; }
 
 .cs-sticky-heading {
   position: sticky;
-  top: 0;
+  top: var(--nav-h);
   z-index: 10;
   background: #ffffff;
-  padding: 28px 0 20px;
+  padding: 20px 0 16px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   margin-bottom: 32px;
 }
