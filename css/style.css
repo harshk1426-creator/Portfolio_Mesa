@@ -1071,7 +1071,7 @@ footer span { color: var(--pink-mid); }
   font-size: 0.95rem;
 }
 
-/* Canvas zone — n8n background */
+/* Canvas zone — CSS dot grid background */
 .ai-section {
   position: relative;
   min-height: 65vh;
@@ -1080,19 +1080,17 @@ footer span { color: var(--pink-mid); }
   justify-content: center;
   padding: 60px 5%;
   overflow: visible;
+  background-color: #f9f9f9;
+  background-image: radial-gradient(circle, #c8c8c8 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-.ai-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: bottom center;
-}
+.ai-bg { display: none; }
 
 .ai-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(245, 245, 245, 0.08);
+  background: transparent;
 }
 
 .ai-content {
