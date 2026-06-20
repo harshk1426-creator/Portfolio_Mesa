@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Models - Harsh Khandelwal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Excel page specific ── */
+    .excel-intro {
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+      text-align: center;
+    }
+
+    .excel-intro p {
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.75;
+    }
+
+    .excel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .excel-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      overflow: hidden;
+      border: 1px solid #f0f0f0;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .excel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    .excel-thumb-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      position: relative;
+      background: #f5f5f5;
+    }
+
+    .excel-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top left;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .excel-card:hover .excel-thumb {
+      transform: scale(1.04);
+    }
+
+    /* Sheets badge */
+    .excel-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 5px 9px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #1e7e34;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    .excel-badge svg { flex-shrink: 0; }
+
+    .excel-body {
+      padding: 20px 22px 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .excel-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1C1C2E;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .excel-desc {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+
+    .excel-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .excel-tag {
+      background: rgba(245,132,58,0.1);
+      color: #F5843A;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 4px 10px;
+      border-radius: 50px;
+      text-transform: uppercase;
+    }
+
+    .excel-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #F5843A;
+      transition: gap 0.2s ease;
+    }
+
+    .excel-link:hover { gap: 10px; }
+
+    @media (max-width: 680px) {
+      .excel-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">HK</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="ai-workflows.html">AI Workflows</a></li>
+      <li><a href="excel-analysis.html" class="active">Financial Models</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+    <div class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <span class="section-label">Excel & Models</span>
+      <h1>Financial <span class="gradient-text">Models</span></h1>
+      <div class="excel-intro">
+        <p>
+          Selected analyses and financial models built during live engagements - from pricing methodology to demand curve projections. Each one reflects the rigour of 3 years in investment banking and a CFA L2 (95th %ile) approach to numbers.
+        </p>
+      </div>
+    </div>
+
+    <!-- CARDS GRID -->
+    <section style="padding: 0 5% 80px;">
+      <div class="excel-grid">
+
+        <!-- 1. GrowFast DCP -->
+        <div class="excel-card fade-up">
+          <div class="excel-thumb-wrap">
+            <img src="assets/GrowFast_DCP.png" alt="GrowFast Demand Curve Projection" class="excel-thumb" />
+            <div class="excel-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="3" fill="#0F9D58"/>
+                <path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z" fill="#fff"/>
+              </svg>
+              Google Sheets
+            </div>
+          </div>
+          <div class="excel-body">
+            <h3 class="excel-title">GrowFast - Demand Curve Projection</h3>
+            <p class="excel-desc">Bottom-up demand forecasting model for a D2C growth platform, mapping price elasticity across customer cohorts to identify the optimal acquisition spend and LTV inflection point.</p>
+            <div class="excel-tags">
+              <span class="excel-tag">Demand Forecasting</span>
+              <span class="excel-tag">Price Elasticity</span>
+              <span class="excel-tag">D2C</span>
+              <span class="excel-tag">LTV Modelling</span>
+            </div>
+            <a href="https://docs.google.com/spreadsheets/d/1K4vECbnSmkLkQ-Kgcd8R1eFddMNquEy4Mfq6aRgQWk0/edit?usp=sharing"
+               target="_blank" rel="noopener noreferrer" class="excel-link">
+              View Live Sheet →
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Uber DCP -->
+        <div class="excel-card fade-up">
+          <div class="excel-thumb-wrap">
+            <img src="assets/UberDCP.png" alt="Uber Demand Curve Projection" class="excel-thumb" />
+            <div class="excel-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="3" fill="#0F9D58"/>
+                <path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z" fill="#fff"/>
+              </svg>
+              Google Sheets
+            </div>
+          </div>
+          <div class="excel-body">
+            <h3 class="excel-title">Uber - Demand Curve Projection</h3>
+            <p class="excel-desc">Ride-hailing demand model using surge pricing elasticity data and trip frequency distributions to project revenue under different pricing scenarios and market expansion assumptions.</p>
+            <div class="excel-tags">
+              <span class="excel-tag">Surge Pricing</span>
+              <span class="excel-tag">Revenue Modelling</span>
+              <span class="excel-tag">Market Sizing</span>
+              <span class="excel-tag">Scenario Analysis</span>
+            </div>
+            <a href="https://docs.google.com/spreadsheets/d/1R9dZCuSqjxrG7LApciiO_Yq0SdFiNPS4xbjvU8DjDBg/edit?usp=sharing"
+               target="_blank" rel="noopener noreferrer" class="excel-link">
+              View Live Sheet →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="contact-strip">
+      <h2>Need a Model Built?</h2>
+      <p>From unit economics to full financial projections - I build models that tell a story, not just crunch numbers.</p>
+      <div class="contact-links">
+        <a href="mailto:harsh_khandelwal@pg26.mesaschool.co" class="contact-link">✉️ Email Me</a>
+        <a href="https://www.linkedin.com/in/kharshhhh/" target="_blank" rel="noopener" class="contact-link">💼 LinkedIn</a>
+      </div>
+    </div>
+
+  </div><!-- /page-content -->
+
+  <footer>
+    <p>Crafted with care by <span>Harsh Khandelwal</span> &nbsp;·&nbsp; 2025</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
