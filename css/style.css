@@ -1497,14 +1497,14 @@ footer span { color: var(--pink-mid); }
 .connect-tile {
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
-  padding: 36px 32px 32px;
+  border-radius: 20px;
+  padding: 24px 24px 22px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   transition: transform 0.28s ease, box-shadow 0.28s ease;
-  min-height: 190px;
+  min-height: 140px;
 }
 
 .connect-tile:hover {
@@ -1515,9 +1515,9 @@ footer span { color: var(--pink-mid); }
 /* Big decorative emoji in corner */
 .connect-tile-bg-icon {
   position: absolute;
-  bottom: -10px;
-  right: 10px;
-  font-size: 5.5rem;
+  bottom: -8px;
+  right: 8px;
+  font-size: 4rem;
   opacity: 0.13;
   line-height: 1;
   pointer-events: none;
@@ -1538,10 +1538,10 @@ footer span { color: var(--pink-mid); }
 }
 
 .connect-tile-value {
-  font-size: 1.15rem;
+  font-size: 0.97rem;
   font-weight: 800;
   line-height: 1.35;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .connect-tile-cta {
@@ -1567,24 +1567,24 @@ footer span { color: var(--pink-mid); }
   flex-direction: row;
   align-items: center;
   gap: 0;
-  min-height: 140px;
+  min-height: 100px;
 }
 
 .connect-tile--phone .connect-tile-bg-icon {
-  font-size: 7rem;
-  bottom: -14px;
-  right: 20px;
+  font-size: 5rem;
+  bottom: -10px;
+  right: 16px;
 }
 
 .connect-tile--phone .connect-tile-text-group {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .connect-tile--phone .connect-tile-value {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   letter-spacing: 0.02em;
 }
 
