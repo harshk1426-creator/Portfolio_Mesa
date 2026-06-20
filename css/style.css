@@ -1462,3 +1462,116 @@ footer span { color: var(--pink-mid); }
 @media (max-width: 680px) {
   .excel-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== LET'S CONNECT SECTION ===== */
+.connect-section {
+  padding: 100px 5% 120px;
+  background: #fff;
+  text-align: center;
+}
+
+.connect-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.connect-heading {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 900;
+  color: #1C1C2E;
+  margin: 10px 0 18px;
+  line-height: 1.1;
+}
+
+.connect-sub {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 60px;
+}
+
+.connect-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.connect-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 28px 24px 24px;
+  background: #fafafa;
+  border: 1.5px solid #f0f0f0;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: left;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.connect-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(245, 132, 58, 0.18);
+  border-color: rgba(245, 132, 58, 0.4);
+}
+
+.connect-card-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+
+.connect-card-text {
+  flex: 1;
+}
+
+.connect-card-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 6px;
+}
+
+.connect-card-value {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1C1C2E;
+  line-height: 1.5;
+}
+
+.connect-card-arrow {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-size: 1.1rem;
+  color: #ccc;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.connect-card:hover .connect-card-arrow {
+  color: #F5843A;
+  transform: translate(3px, -3px);
+}
+
+.connect-footnote {
+  font-size: 0.82rem;
+  color: #aaa;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 680px) {
+  .connect-cards { grid-template-columns: 1fr; }
+  .connect-section { padding: 70px 5% 80px; }
+}
