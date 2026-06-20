@@ -1331,8 +1331,18 @@ footer span { color: var(--pink-mid); }
 
 /* ===== DATA / EXCEL MODELS SECTION ===== */
 .data-section {
-  padding: 80px 5%;
+  padding: 0 5% 80px;
   background: #fff;
+}
+
+.data-sticky-heading {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 10;
+  background: #ffffff;
+  padding: 20px 0 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  margin-bottom: 32px;
 }
 
 .excel-grid {
@@ -1355,8 +1365,10 @@ footer span { color: var(--pink-mid); }
 }
 
 .excel-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 44px rgba(0,0,0,0.12);
+  transform: scale(1.04);
+  box-shadow: 0 16px 48px rgba(245, 132, 58, 0.5);
+  z-index: 5;
+  position: relative;
 }
 
 .excel-thumb-wrap {
