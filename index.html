@@ -221,16 +221,40 @@
     <section class="ai-section">
       <div class="ai-overlay"></div>
       <div class="ai-content">
-        <div class="ai-pipeline">
 
-          <!-- Node 1 -->
-          <div class="ai-node-wrap" data-index="0"
+        <div class="ai-orbit-wrap">
+
+          <!-- Orbit SVG: dashed ring + spokes -->
+          <svg class="ai-orbit-svg" viewBox="0 0 600 580" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="300" cy="290" r="210" fill="none" stroke="#d8d8d8" stroke-width="1.2" stroke-dasharray="6 5"/>
+            <line x1="300" y1="290" x2="300" y2="82"   stroke="#e0e0e0" stroke-width="1"/>
+            <line x1="300" y1="290" x2="500" y2="225"  stroke="#e0e0e0" stroke-width="1"/>
+            <line x1="300" y1="290" x2="423" y2="461"  stroke="#e0e0e0" stroke-width="1"/>
+            <line x1="300" y1="290" x2="177" y2="461"  stroke="#e0e0e0" stroke-width="1"/>
+            <line x1="300" y1="290" x2="100" y2="225"  stroke="#e0e0e0" stroke-width="1"/>
+          </svg>
+
+          <!-- Center card — shows idle state or hovered node detail -->
+          <div class="ai-orbit-center" id="aiOrbitCenter">
+            <div class="ai-orbit-idle" id="aiOrbitIdle">
+              <span class="ai-orbit-idle-icon">✦</span>
+              <p class="ai-orbit-idle-text">Hover a<br>node</p>
+            </div>
+            <div class="ai-orbit-detail" id="aiOrbitDetail">
+              <span class="ai-popup-tag" id="aiPopupTag"></span>
+              <h3 class="ai-popup-title" id="aiPopupTitle"></h3>
+              <p class="ai-popup-desc" id="aiPopupDesc"></p>
+              <a class="ai-popup-btn" id="aiPopupBtn" target="_blank" rel="noopener">View Agent ↗</a>
+            </div>
+          </div>
+
+          <!-- Node 1 — top center (-90°) -->
+          <div class="ai-node-wrap ai-node-wrap--orbit" style="left:230px;top:50px"
                data-tag="Social Media"
                data-title="Instagram Auditor"
-               data-desc="An AI agent that analyses an Instagram profile's content, engagement rates, posting patterns, and audience signals to generate a comprehensive audit report with actionable recommendations."
+               data-desc="Analyses an Instagram profile's content, engagement rates, posting patterns, and audience signals to generate a comprehensive audit report with actionable recommendations."
                data-loom="https://www.loom.com/share/0a87caac58aa4b19910358daf4d7ec9a">
             <div class="ai-node">
-              <div class="ai-node-handle ai-node-handle--left"></div>
               <div class="ai-node-body">
                 <div class="ai-node-icon-box" style="background:#fce7d6;">📱</div>
                 <div class="ai-node-text">
@@ -238,41 +262,33 @@
                   <span class="ai-node-sub">Social Media</span>
                 </div>
               </div>
-              <div class="ai-node-handle ai-node-handle--right"></div>
             </div>
           </div>
 
-          <div class="ai-arrow"><svg viewBox="0 0 60 12" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="52" y2="6" stroke="#c8c8c8" stroke-width="1.5"/><polygon points="52,2 60,6 52,10" fill="#c8c8c8"/></svg><div class="ai-flow-dot"></div></div>
-
-          <!-- Node 2 -->
-          <div class="ai-node-wrap" data-index="1"
+          <!-- Node 2 — top right (-18°) -->
+          <div class="ai-node-wrap ai-node-wrap--orbit" style="left:428px;top:198px"
                data-tag="Content"
-               data-title="Trend-based Notification Generator"
-               data-desc="Automatically detects trending topics relevant to a brand and generates timely, personalised push notifications - keeping audiences engaged with minimal manual effort."
+               data-title="Notification Generator"
+               data-desc="Detects trending topics relevant to a brand and generates timely, personalised push notifications - keeping audiences engaged with minimal manual effort."
                data-loom="https://www.loom.com/share/b1d49808c2894594a07eae59274eff8b">
             <div class="ai-node">
-              <div class="ai-node-handle ai-node-handle--left"></div>
               <div class="ai-node-body">
                 <div class="ai-node-icon-box" style="background:#e8dff5;">🔔</div>
                 <div class="ai-node-text">
-                  <span class="ai-node-name">Notification Generator</span>
+                  <span class="ai-node-name">Notification Gen.</span>
                   <span class="ai-node-sub">Content</span>
                 </div>
               </div>
-              <div class="ai-node-handle ai-node-handle--right"></div>
             </div>
           </div>
 
-          <div class="ai-arrow"><svg viewBox="0 0 60 12" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="52" y2="6" stroke="#c8c8c8" stroke-width="1.5"/><polygon points="52,2 60,6 52,10" fill="#c8c8c8"/></svg><div class="ai-flow-dot"></div></div>
-
-          <!-- Node 3 -->
-          <div class="ai-node-wrap" data-index="2"
+          <!-- Node 3 — bottom right (54°) -->
+          <div class="ai-node-wrap ai-node-wrap--orbit" style="left:353px;top:430px"
                data-tag="E-Commerce"
                data-title="Amazon Review Scraper"
                data-desc="Scrapes and analyses Amazon product reviews at scale, extracting sentiment, recurring pain points, and feature requests - turning raw reviews into structured competitive intelligence."
                data-loom="https://www.loom.com/share/acd0e05b573e474e8a1d4c8194d3711e">
             <div class="ai-node">
-              <div class="ai-node-handle ai-node-handle--left"></div>
               <div class="ai-node-body">
                 <div class="ai-node-icon-box" style="background:#d6eeff;">🛒</div>
                 <div class="ai-node-text">
@@ -280,20 +296,16 @@
                   <span class="ai-node-sub">E-Commerce</span>
                 </div>
               </div>
-              <div class="ai-node-handle ai-node-handle--right"></div>
             </div>
           </div>
 
-          <div class="ai-arrow"><svg viewBox="0 0 60 12" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="52" y2="6" stroke="#c8c8c8" stroke-width="1.5"/><polygon points="52,2 60,6 52,10" fill="#c8c8c8"/></svg><div class="ai-flow-dot"></div></div>
-
-          <!-- Node 4 -->
-          <div class="ai-node-wrap" data-index="3"
+          <!-- Node 4 — bottom left (126°) -->
+          <div class="ai-node-wrap ai-node-wrap--orbit" style="left:30px;top:430px"
                data-tag="Finance Ops"
-               data-title="Automated Invoice Processor"
+               data-title="Invoice Processor"
                data-desc="Reads, extracts, and categorises invoice data automatically - eliminating manual data entry, reducing errors, and feeding structured outputs directly into accounting or ERP workflows."
                data-loom="https://www.loom.com/share/75bfc85659074923bbd9a77d81e704a0">
             <div class="ai-node">
-              <div class="ai-node-handle ai-node-handle--left"></div>
               <div class="ai-node-body">
                 <div class="ai-node-icon-box" style="background:#d6f5e8;">🧾</div>
                 <div class="ai-node-text">
@@ -301,20 +313,16 @@
                   <span class="ai-node-sub">Finance Ops</span>
                 </div>
               </div>
-              <div class="ai-node-handle ai-node-handle--right"></div>
             </div>
           </div>
 
-          <div class="ai-arrow"><svg viewBox="0 0 60 12" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="6" x2="52" y2="6" stroke="#c8c8c8" stroke-width="1.5"/><polygon points="52,2 60,6 52,10" fill="#c8c8c8"/></svg><div class="ai-flow-dot"></div></div>
-
-          <!-- Node 5 -->
-          <div class="ai-node-wrap" data-index="4"
+          <!-- Node 5 — top left (198°) -->
+          <div class="ai-node-wrap ai-node-wrap--orbit" style="left:28px;top:198px"
                data-tag="Finance"
                data-title="Financial Analyst"
-               data-desc="An AI agent that ingests financial data (P&amp;L, balance sheets, cash flows) and generates analysis reports, highlights anomalies, and surfaces key ratios - acting as an always-on analyst."
+               data-desc="Ingests financial data (P&amp;L, balance sheets, cash flows) and generates analysis reports, highlights anomalies, and surfaces key ratios - acting as an always-on analyst."
                data-loom="https://www.loom.com/share/75bfc85659074923bbd9a77d81e704a0">
             <div class="ai-node">
-              <div class="ai-node-handle ai-node-handle--left"></div>
               <div class="ai-node-body">
                 <div class="ai-node-icon-box" style="background:#fff3d6;">📊</div>
                 <div class="ai-node-text">
@@ -322,21 +330,14 @@
                   <span class="ai-node-sub">Finance</span>
                 </div>
               </div>
-              <div class="ai-node-handle ai-node-handle--right"></div>
             </div>
           </div>
 
-        </div><!-- /ai-pipeline -->
+        </div><!-- /ai-orbit-wrap -->
       </div><!-- /ai-content -->
     </section>
 
-    <!-- Shared AI node popup (fixed, centered, JS-controlled) -->
-    <div id="aiNodePopup" class="ai-fixed-popup">
-      <span class="ai-popup-tag" id="aiPopupTag"></span>
-      <h3 class="ai-popup-title" id="aiPopupTitle"></h3>
-      <p class="ai-popup-desc" id="aiPopupDesc"></p>
-      <a class="ai-popup-btn" id="aiPopupBtn" target="_blank" rel="noopener">View Agent ↗</a>
-    </div>
+    <!-- (popup now lives inside orbit center — no fixed popup needed) -->
 
     <!-- FINANCIAL MODELS / DATA SECTION -->
     <section class="data-section">
