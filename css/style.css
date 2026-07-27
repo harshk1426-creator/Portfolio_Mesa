@@ -1004,6 +1004,18 @@ section { padding: 80px 5%; }
   transform: translateY(-4px) scale(1.02);
 }
 
+.cs-thumb-wrap--zen {
+  width: 140px;
+  height: 80px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.07);
+}
+
+.cs-thumb-wrap--zen .cs-thumb {
+  object-fit: contain;
+  background: #fff;
+}
+
 .cs-zen-goal {
   display: inline-flex;
   align-items: center;
